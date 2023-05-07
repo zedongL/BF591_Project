@@ -442,7 +442,6 @@ server <- function(input, output, session) {
                   input$plot_x_output,
                   input$plot_y_output,
                   input$sample_plot_type )
-      print("1")
     }
     else {
       p <- plot_sample(rv$meta_df,
@@ -450,7 +449,6 @@ server <- function(input, output, session) {
                   input$plot_y_output,
                   input$sample_plot_type,
                   input$group_by_output)
-      print("2")
     }
     return(p)
   },height = 400, width = 600)
@@ -566,8 +564,6 @@ server <- function(input, output, session) {
   output$de_table <- renderDataTable({
       req(rv$de_tibble)
       if (!is.null(rv$de_tibble)&!is.null(input$de_p_output)&!is.null(input$p_slider)) {
-        print(input$de_p_output)
-        print(input$p_slider)
         ret <- dplyr::filter(rv$de_tibble,!!sym(input$de_p_output) <= 10^input$p_slider)
         ret <- format_number(ret)
 
@@ -616,7 +612,7 @@ server <- function(input, output, session) {
                     min = -300,
                     max = 0,
                     step = 1,
-                    value = -5)
+                    value = -2)
       )
     }
     else {

@@ -1,6 +1,7 @@
 library(tidyverse)
 library(gplots)
 library(enrichplot)
+library(ggpubr)
 
 filter_same_cols <- function(meta_df) {
   same <- list()
@@ -187,7 +188,7 @@ volcano_plot <- function(dataf, x_name, y_name, p_col,slider, color1, color2) {
 }
 
 make_gene_list <- function (de_df, gene_list,gene_rank){
-  de_df <- de_df %>% select(gene_list, gene_rank)
+  de_df <- de_df %>% dplyr::select(gene_list, gene_rank)
   names(de_df) <- c("g_id", "rank_value")
   de_df$g_id <- sub("\\.\\d+", "", de_df$g_id)
   return(de_df)

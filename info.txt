@@ -1,0 +1,11 @@
+data: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE64810
+soft file and supplementary files
+soft file to get metadata
+supplementary files to get count matrix and differential expression data.
+
+
+# TODO: histograms, density plots, or violin plots of continuous variables.
+# TODO: Add more DE enrichment analysis (GSEA, etc. from clusterProfiler)
+# TODO: link metadata to count matrix so that pca plot can group by metadata
+# TODO: add script to do DeSeq2, edgeR, etc. analysis using count matrix
+
