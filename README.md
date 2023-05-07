@@ -1,4 +1,5 @@
 # BF591_Project
+This is a Rshiny application for analyzing mRNA-seq data.<br>
 Sample data is from GSE64810.<br>
 69 human post-mortem BA9 brain tissue mRNA-seq expression profiles.<br>
 
